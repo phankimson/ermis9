@@ -20,9 +20,9 @@
     <div id="notification"></div>
     <table>
       <tr>
-      <td class="row-label"><label>@lang('acc_number_voucher.menu')</label></td>
+      <td class="row-label"><label>@lang('acc_number_voucher_format.number_voucher')</label></td>
       <td>
-      <select class="droplist large" data-position="1" data-title="@lang('acc_number_voucher.menu')" data-template="#= FormatDropList(menu_id,'menu_id') #" data-type="number" data-width="200px" name="menu_id">
+      <select class="droplist large" data-position="1" data-title="@lang('acc_number_voucher_format.number_voucher')" data-template="#= FormatDropList(number_voucher,'number_voucher') #" data-type="number" data-width="200px" name="number_voucher">
               <option readonly selected value="0">--Select--</option>
                 @foreach($menu as $m)
                    <option value="{{ $m->id }}">{{ $m->code }} - {{ $lang == 'vi'? $m->name : $m->name_en }}</option>
@@ -31,25 +31,9 @@
       </td>
       </tr>
       <tr>
-          <td class="row-label"><label>@lang('acc_number_voucher.code') *</label></td>
-          <td><input type="text" class="k-textbox medium" data-position="2" data-title="@lang('acc_number_voucher.code')" data-width="200px" maxlength="50" data-type="string" name="code" /></td>
-      </tr>
-      <tr>
-          <td class="row-label"><label>@lang('acc_number_voucher.name') </label></td>
-          <td><input type="text" class="k-textbox xxlarge" data-position="3" data-title="@lang('acc_number_voucher.name')" data-width="200px" maxlength="100" data-type="string" name="name" /></td>
-      </tr>
-      <tr>
-          <td class="row-label"><label>@lang('acc_number_voucher.name_en') </label></td>
-          <td><input type="text" class="k-textbox xxlarge" data-position="3" data-title="@lang('acc_number_voucher.name_en')" data-width="200px" maxlength="100" data-type="string" name="name_en" /></td>
-      </tr>   
-      <tr>
-          <td class="row-label"><label>@lang('acc_number_voucher.prefix') </label></td>
-          <td><input type="text" class="k-textbox xxlarge" data-position="3" data-title="@lang('acc_number_voucher.prefix')" data-width="200px" maxlength="100" data-type="string" name="prefix" /></td>
-      </tr>
-      <tr>
-      <td class="row-label"><label>@lang('acc_number_voucher.middle_type')</label></td>
+      <td class="row-label"><label>@lang('acc_number_voucher_format.format')</label></td>
       <td>
-      <select class="droplist large" data-position="1" data-title="@lang('acc_number_voucher.middle_type')" data-template="#= FormatDropList(middle_type,'middle_type') #" data-type="number" data-width="200px" name="middle_type">
+      <select class="droplist large" data-position="1" data-title="@lang('acc_number_voucher_format.format')" data-template="#= FormatDropList(format,'format') #" data-type="number" data-width="200px" name="format">
               <option readonly selected value="0">@lang('global.select')</option>              
                 @foreach($number_voucher_format as $k=>$m)
                    <option value="{{ $k }}"> {{ $m }}</option>
@@ -58,24 +42,15 @@
       </td>
       </tr>
       <tr>
-          <td class="row-label"><label>@lang('acc_number_voucher.middle') </label></td>
-          <td><input type="text" class="k-textbox xxlarge" data-position="3" data-title="@lang('acc_number_voucher.middle')" data-width="200px" maxlength="100" data-type="string" name="middle" /></td>
-      </tr>   
-      <tr>
-      <td class="row-label"><label>@lang('acc_number_voucher.suffixes_type')</label></td>
+      <td class="row-label"><label>@lang('acc_number_voucher_format.type')</label></td>
       <td>
       <select class="droplist large" data-position="1" data-title="@lang('acc_number_voucher.suffixes_type')" data-template="#= FormatDropList(suffixes_type,'suffixes_type') #" data-type="number" data-width="200px" name="suffixes_type">
               <option readonly selected value="0">@lang('global.select')</option>              
-                @foreach($number_voucher_format as $k=>$m)
-                   <option value="{{ $k }}"> {{ $m }}</option>
-                @endforeach
+              <option value="1"> {{ trans('acc_number_voucher.suffixes') }}</option>
+              <option value="2"> {{ trans('acc_number_voucher.prefix') }}</option>
       </select>
       </td>
-      </tr>      
-      <tr>
-          <td class="row-label"><label>@lang('acc_number_voucher.suffixes') </label></td>
-          <td><input type="text" class="k-textbox xxlarge" data-position="3" data-title="@lang('acc_number_voucher.suffixes')" data-width="200px" maxlength="100" data-type="string" name="suffixes" /></td>
-      </tr>
+      </tr> 
       <tr>
           <td class="row-label"><label>@lang('acc_number_voucher.number') *</label></td>
           <td><input type="number" class="k-textbox xlarge" data-position="3" data-title="@lang('acc_number_voucher.number')" value="1" data-width="200px" maxlength="100" data-type="string" name="number" /></td>
@@ -84,10 +59,6 @@
           <td class="row-label"><label>@lang('acc_number_voucher.length_number') *</label></td>
           <td><input type="number" class="k-textbox xlarge" data-position="3" data-title="@lang('acc_number_voucher.length_number')" value="1" data-width="200px" maxlength="11" data-type="string" name="length_number" /></td>
       </tr>
-      <tr>
-            <td><label>@lang('acc_number_voucher.change_voucher')</label></td>
-            <td class="row-height"><input type="checkbox" data-md-icheck="" data-position="10" data-value="1"  data-title="@lang('acc_number_voucher.change_voucher')" data-width="100px" data-type="number" data-template="#= FormatCheckBox(change_voucher) #" name="change_voucher" /></td>
-        </tr>
       <tr>
             <td><label>@lang('action.active')</label></td>
             <td class="row-height"><input type="checkbox" data-md-icheck="" data-position="10" data-value="1"  data-title="@lang('action.active')" data-width="100px" data-type="number" data-template="#= FormatCheckBox(active) #" name="active" /></td>
