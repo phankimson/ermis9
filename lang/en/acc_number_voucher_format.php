@@ -12,22 +12,10 @@ return [
     | you want to customize your views to better match your application.
     |
     */
-    "menu" => "Menu",
-    "name" => "Name",
-    "name_en" => "Name English",
-    "code" => "Code",
-    "prefix" => "Prefix",
-    "suffixes" => "Suffixes",
-    "number" => "Number",
-    "length_number" => "Length number",
-    "for" => "For",
-    "year" => "year",
-    "year_full" => "year full",
-    "day" => "day",
-    "month" => "month",
-    "date" => "date",
-    "middle_type" => "Middle type",
+    "number_voucher" => "Number voucher",
+    "format" => "Format",
     "suffixes_type" => "Suffixes type",
-    "middle" => "Middle",
-    "change_voucher" => "Change Voucher",
+    "number" => "Number",
+    "type" => "Type",
+    "length_number" => "Length number",
 ];

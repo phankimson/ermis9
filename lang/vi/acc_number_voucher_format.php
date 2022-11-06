@@ -12,22 +12,9 @@ return [
     | you want to customize your views to better match your application.
     |
     */
-    "menu" => "Danh mục",
-    "name" => "Tên",
-    "name_en" => "Tên tiếng anh",
-    "code" => "Mã",
-    "prefix" => "Ký tự đầu",
-    "suffixes" => "Ký tự cuối",
+    "number_voucher" => "Số chứng từ tự động",
+    "format" => "Định dạng",
+    "suffixes_type" => "Loại tiền tố trước",
     "number" => "Số",
-    "length_number" => "Chiều dài số",
-    "for" => "Theo",
-    "year" => "năm",
-    "day" => "ngày",
-    "month" => "tháng",
-    "date" => "ngày tháng năm",
-    "year_full" => "năm đầy đủ",
-    "middle_type" => "Loại ký tự giữa",
-    "suffixes_type" => "Loại ký tự cuối",
-    "middle" => "Ký tự giữa",
-    "change_voucher" => "Change Voucher",
+    "length_number" => "Độ dài số",
 ];
